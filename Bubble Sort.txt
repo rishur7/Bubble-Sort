@@ -1,0 +1,32 @@
+import java.util.Scanner; //With Bubble Sort
+public class Ar {
+
+	public static void main(String[] args) {
+		   
+        Scanner scan = new Scanner(System.in);
+        int n = scan.nextInt();
+    int[] ar = new int[n];
+    int i,t;
+    for(i=0;i<n;i++)
+    {
+    ar[i]=scan.nextInt();
+    }
+for(i=0;i<n;i++)
+{
+ for(int j=0;j<n;j++)
+ {
+	if(ar[i]<ar[j])
+	{
+		t=ar[i];
+		ar[i]=ar[j];
+                ar[j]=t;
+}
+}
+}
+for(i=0;i<n;i++)
+{
+System.out.println(ar[i]);
+}
+scan.close();
+}
+}
